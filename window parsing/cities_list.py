@@ -28,4 +28,4 @@ with open('links.txt', 'w') as file:
     for link in links:
         file.write(link + '\n')
 
-print("Links have been written to links.txt file.")
+print("Links have been written to cat_links.txt file.")

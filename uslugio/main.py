@@ -24,13 +24,13 @@ from selenium.webdriver.chrome.options import Options
 # soup = BeautifulSoup(req.text, 'lxml')
 # all_services = soup.find_all('div', class_='col-sm-4')
 #
-# with open('links.txt', 'w') as file:
+# with open('cat_links.txt', 'w') as file:
 #     for div in all_services:
 #         links = div.find_all('a', href=True)
 #         for link in links:
 #             file.write("https://uslugio.com/" + link['href'] + '\n')
 
-# with (open('links.txt', 'r') as file):
+# with (open('cat_links.txt', 'r') as file):
 #     for i in file:
 #
 #         req = requests.get(url=i, headers=headers)
@@ -105,7 +105,7 @@ def get_data(url):
     options = webdriver.ChromeOptions()
     options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)"
                          " Chrome/116.0.5845.888 YaBrowser/23.9.2.888 Yowser/2.5 Safari/537.36")
-    options.add_argument(f'--proxy-server={PROXY}')
+
     driver = webdriver.Chrome(service=service, options=options)
 
     try:
